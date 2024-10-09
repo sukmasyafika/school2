@@ -1,0 +1,92 @@
+* {
+  font-family: 'Jost', sans-serif;
+}
+
+/* login */
+/* .login {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+} */
+
+.navbar-nav .nav-link {
+  color: #000;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #17a2b8;
+}
+
+/* profil */
+.card-about {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-about:hover {
+  transform: translateY(-5px);
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+
+/* profil */
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+.article-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.article-card:hover {
+  transform: scale(1.05);
+}
+
+
+.social-media a {
+  color: #007bff;
+  font-size: 1.5rem;
+  margin: 0 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.social-media a:hover {
+  color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* login */
+.social-iconn {
+  color: #0d6efd;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.social-iconn:hover {
+  color: #0048b4;
+  transition: color 0.3s ease;
+}
+
+/* login */
