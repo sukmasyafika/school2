@@ -2,77 +2,127 @@
 
 <?= $this->section('content'); ?>
 
-<!-- artikel -->
-<section id="artikel" x-data="{ aktifArtikel: null }" class="pt-5 my-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="display-4 pb-3 fw-semibold">Berita <span class="text-info">Terbaru</span></h2>
-      <p class="lead fst-italic">Berita terbaru dan artikel menarik dari sekolah kami.</p>
+<!-- profil -->
+<section id="about" class="container mt-5 py-5">
+  <div class="mb-5 text-center">
+    <h2 class="display-4 pb-3 fw-semibold">Profil <span class="text-info">SMK N 2</span></h2>
+    <p class="fst-italic">SMKN 2 merupakan sekolah terbagus dan terluas yang ada di Papua. Ada 5 jurusan yang siap mempersiapkan Anda menjadi orang sukses.</p>
+  </div>
+  <div class="row justify-content-center">
+    <div class=" text-center mb-4">
+      <img src="<?= base_url('assets/img/about/ks-1.jpg'); ?>" alt="Kepala Sekolah" class="img-fluid rounded shadow-lg" width="250">
+      <h4 class="mt-3 fw-bold">Kepala Sekolah</h4>
     </div>
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card article-card h-100 shadow border borde-secondary">
-          <img src="<?= base_url('assets/img/berita/b-3.jpg'); ?>" class="card-img-top article-image" alt="Artikel 1" height="300">
-          <div class="card-body">
-            <div class="article-meta pb-3 text-secondary">20 September 2024</div>
-            <h5 class="card-title">Prestasi Siswa dalam Olimpiade Sains Nasional</h5>
-            <p class="card-text">
-              Siswa kami berhasil meraih medali emas dalam Olimpiade Sains Nasional.
-            </p>
-            <!-- mengembalikan undefined, memastikan tidak ada nilai atau aksi yang dikembalikan atau diproses. -->
-            <!-- jika 'baca selengkap' nya di klik maka aktifArtikel maka akan menjalnkan kondisi -->
-            <!-- apakah artikel (baca selengkapnya) akan ditampilkan atau disembunyikan -->
-            <!-- Mengecek aktifArtikel sama dengan 1. jika iya maka menjadi null, artikel tersebut akan disembunyikan. -->
-            <!-- Jika aktifArtikel tidak sama dengan 1, maka akan di-set menjadi 1, yang artinya artikel tersebut akan ditampilkan. -->
-            <!-- Jika nilainya 1, maka artikel tersebut dianggap aktif (ditampilkan). Jika nilainya null, maka artikel tersebut tidak aktif (disembunyikan). -->
-            <a href="javascript:void(0)" class="read-more" @click="aktifArtikel = aktifArtikel === 1 ? null : 1">Baca
-              Selengkapnya</a>
-            <div x-show="aktifArtikel === 1" x-cloak class="mt-3">
-              <p>Siswa kami berhasil meraih medali emas dalam Olimpiade Sains Nasional. Baca selengkapnya tentang
-                perjalanan mereka dan bagaimana mereka menghadapi tantangan selama kompetisi.</p>
-            </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            SMKN 2 Bisnis dan Manajemen Jayapura merupakan salah satu SMK Pusat Keunggulan yang ada di Provinsi Papua, terletak di Jl. Raya Kotaraja Dalam, Abepura Papua. Sebagaimana sekolah menengah kejuruan lainnya, sekolah ini juga mengelola beberapa Program Keahlian di antaranya Manajemen Perkantoran dan Layanan Bisnis, Akuntansi dan Keuangan Lembaga, Pemasaran, Usaha Layanan Pariwisata, dan Teknik Jaringan Komputer dan Telekomunikasi. SMKN 2 Bisnis dan Manajemen didukung oleh tenaga GTK yang kompeten di bidangnya sehingga berkualitas dan menjadi salah satu SMK terbaik di Kota Jayapura.
+          </p>
+          <h2 class="card-title mt-4 mb-4 fw-medium">Visi</h2>
+          <p class="card-text">Sebagai Lembaga Diklat Kejuruan yang Berstandar Mutu dan Tetap Mengemban Potensi Tanah Papua Menuju Kemandirian.</p>
+          <h2 class="card-title mb-4 fw-medium">Misi</h2>
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-start mb-2">
+              <span class="badge bg-info rounded-pill me-3">1</span>
+              <span>Menyelenggarakan PBM yang Bermutu, Berakhlak dan Bermoral.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+              <span class="badge bg-info rounded-pill me-3">2</span>
+              <span>Mengembangkan kegiatan Diklat yang Inovatif, Kreatif dan Produktif.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+              <span class="badge bg-info rounded-pill me-3">3</span>
+              <span>Mendorong partisipasi aktif dalam menjaga lingkungan.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+              <span class="badge bg-info rounded-pill me-3">4</span>
+              <span>Mengembangkan keterampilan dan kreativitas siswa.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+              <span class="badge bg-info rounded-pill me-3">5</span>
+              <span>Menyediakan layanan Diklat bermutu bagi Lembaga-Lembaga Dinas/Instansi, sesuai dengan bidang keahlian yang ada.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- profil -->
+
+<!-- pendidikan -->
+<section id="tenaga" class="container py-5">
+  <div class="mb-5 text-center">
+    <h2 class="display-4 pb-3 fw-semibold">Tenaga Pendidikan <span class="text-info">Dan Kependudukan</span></h2>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card shadow">
+        <img src="<?= base_url('assets/img/tenaga/tenaga1.jpg'); ?>" class="card-img-top" alt="Budi Santoso" height="250">
+        <div class="card-body text-center">
+          <h5 class="card-title">Budi Santoso</h5>
+          <p class="card-text">Jabatan: Guru Kelas<br>
+            Mata Pelajaran: Matematika</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card shadow">
+        <img src="<?= base_url('assets/img/tenaga/g-3.png'); ?>" class="card-img-top" alt="Budi Santoso" height="250">
+        <div class="card-body text-center">
+          <h5 class="card-title">Siti Nurjanah</h5>
+          <p class="card-text">Jabatan: Guru Bahasa Inggris<br>
+            Mata Pelajaran: Bahasa Inggris</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card shadow">
+        <img src="<?= base_url('assets/img/tenaga/g-2.jpg'); ?>" class="card-img-top" alt="Budi Santoso" height="250">
+        <div class="card-body text-center">
+          <h5 class="card-title">Ahmad Taufik</h5>
+          <p class="card-text">Jabatan: Guru Sains<br>
+            Mata Pelajaran: Fisika</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- pendidikan -->
+
+<!-- fasitas -->
+<section id="fasilitas" class="container py-5">
+  <div class="mb-5 text-center">
+    <h2 class="display-4 pb-3 fw-semibold">Fasilitas <span class="text-info">Sekolah</span></h2>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="<?= base_url('assets/img/about/kelas.jpg'); ?>" class="card-img-top" alt="Budi Santoso" height="250">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ruang Kelas</h5>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card article-card h-100 shadow border borde-secondary">
-          <img src="<?= base_url('assets/img/berita/b-2.jpg'); ?>" class="card-img-top article-image" alt="Artikel 2" height="300">
-          <div class="card-body">
-            <div class="article-meta pb-3 text-secondary">18 September 2024</div>
-            <h5 class="card-title">Kunjungan Industri ke Perusahaan Teknologi Terdepan</h5>
-            <p class="card-text">
-              Siswa kelas 12 jurusan Teknik Informatika berkesempatan mengunjungi perusahaan teknologi terkemuka.
-            </p>
-            <a href="javascript:void(0)" class="read-more" @click="aktifArtikel = aktifArtikel === 2 ? null : 2">Baca
-              Selengkapnya</a>
-            <div x-show="aktifArtikel === 2" x-cloak class="mt-3">
-              <p>Simak pengalaman mereka dalam memahami teknologi terbaru di perusahaan tersebut dan bagaimana
-                kunjungan ini memotivasi siswa untuk berkarir di bidang teknologi.</p>
-            </div>
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="<?= base_url('assets/img/about/lab.jpg'); ?>" class="card-img-top" alt="Budi Santoso" height="250">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lab Tiap Jurusan</h5>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card article-card h-100 shadow border borde-secondary">
-          <img src="<?= base_url('assets/img/berita/b-1.jpg'); ?>" class="card-img-top article-image" alt="Artikel 3" height="300">
-          <div class="card-body">
-            <div class="article-meta pb-3 text-secondary">15 September 2024</div>
-            <h5 class="card-title">Pengabdian Masyarakat oleh Siswa di Desa Terpencil</h5>
-            <p class="card-text">
-              Siswa kami terlibat dalam program pengabdian masyarakat di desa terpencil.
-            </p>
-            <a href="javascript:void(0)" class="read-more" @click="aktifArtikel = aktifArtikel === 3 ? null : 3">Baca
-              Selengkapnya</a>
-            <div x-show="aktifArtikel === 3" x-cloak class="mt-3">
-              <p>Pelajari lebih lanjut tentang kegiatan ini, termasuk bagaimana siswa membantu masyarakat dalam bidang
-                pendidikan, kesehatan, dan teknologi.</p>
-            </div>
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="<?= base_url('assets/img/about/olahraga.jpg'); ?>" class="card-img-top" alt="Budi Santoso" height="250">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lapangan olahraga</h5>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- artikel -->
+<!-- fasitas -->
 
 <?= $this->endSection(); ?>
