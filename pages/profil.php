@@ -95,6 +95,32 @@
 <section id="fasilitas" class="container py-5">
   <div class="mb-5 text-center">
     <h2 class="display-4 pb-3 fw-semibold">Fasilitas <span class="text-info">Sekolah</span></h2>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="<?= base_url('assets/img/about/kelas.jpg'); ?>" class="card-img-top" alt="Budi Santoso" height="250">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ruang Kelas</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="<?= base_url('assets/img/about/lab.jpg'); ?>" class="card-img-top" alt="Budi Santoso" height="250">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lab Tiap Jurusan</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card shadow">
+          <img src="<?= base_url('assets/img/about/olahraga.jpg'); ?>" class="card-img-top" alt="Budi Santoso" height="250">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lapangan olahraga</h5>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <!-- fasitas -->
