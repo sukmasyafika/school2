@@ -50,6 +50,15 @@
         </form>
       </div>
     </div>
+
+    <!-- maps -->
+    <div class="col-2">
+      <div class="maps" style="display: flex; flex-direction: column; align-items: center;">
+        <h5>SMK N 2</h5>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3793.698986650214!2d140.66990017474564!3d-2.5973909384642364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf5f3a9c2874b%3A0xf907f890c4c4453d!2sState%20Professional%20School%202%20of%20Jayapura!5e1!3m2!1sen!2sid!4v1728876437553!5m2!1sen!2sid"
+          width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
   </div>
 </section>
 <!-- Akhir Contact -->
