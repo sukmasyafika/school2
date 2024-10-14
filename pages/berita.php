@@ -19,9 +19,10 @@
               <a href="#" class="text-decoration-none">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
             </article>
           </div>
+
           <div class="col-12 col-md-6 mb-4">
             <article>
-              <img src="<?= base_url('assets/img/berita/sains.jpg'); ?>" class="img-fluid" alt="Bottom Left Image 1">
+              <img src="<?= base_url('assets/img/berita/sains.jpg'); ?>" class="img-fluid same-size" alt="Bottom Left Image 1">
               <h4 class="mt-3 fw-bold">Kegiatan Lomba Sains Tingkat Provinsi</h4>
               <p>Siswa SMK N 2 Jayapura berhasil meraih juara 1 dalam lomba sains tingkat provinsi yang diadakan di Kota Jayapura.</p>
               <a href="#" class="text-decoration-none">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
@@ -29,7 +30,7 @@
           </div>
           <div class="col-12 col-md-6 mb-4">
             <article>
-              <img src="<?= base_url('assets/img/berita/b-2.jpg'); ?>" class="img-fluid" alt="Bottom Left Image 2">
+              <img src="<?= base_url('assets/img/berita/b-2.jpg'); ?>" class="img-fluid same-size" alt="Bottom Left Image 2">
               <h4 class="mt-3 fw-bold">Workshop Teknologi Informasi untuk Guru</h4>
               <p>Guru-guru SMK N 2 Jayapura mengikuti workshop tentang teknologi informasi untuk meningkatkan keterampilan dalam pengajaran.</p>
               <a href="#" class="text-decoration-none">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
@@ -37,7 +38,6 @@
           </div>
         </div>
       </div>
-
       <div class="col-lg-6">
         <h3 class="fw-bold mb-5 text-info">Berita Terbaru</h3>
         <article class="d-flex mb-4">
