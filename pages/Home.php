@@ -8,7 +8,7 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="assets/img/bg/g-1.jpg" class="d-block w-100" alt="">
+          <img src="<?= base_url('assets/img/bg/g-1.jpg'); ?>" class="d-block w-100" alt="">
           <div class="carousel-caption d-none d-md-block">
             <h5 class="fs-1 text-light fw-semibold">Tempat Belajar, Berkembang, dan Berprestasi</h5>
             <p class="text-light">SMK N 2 adalah rumah bagi siswa yang ingin berkembang dalam keterampilan dan
@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="assets/img/bg/g-2.jpg" class="d-block w-100" alt="">
+          <img src="<?= base_url('assets/img/bg/g-2.jpg') ?>" class="d-block w-100" alt="">
           <div class="carousel-caption d-none d-md-block">
             <h5 class="fs-1 text-light fw-semibold">Membangun Karakter, Mengasah Keterampilan</h5>
             <p class="text-light">Dengan fasilitas lengkap dan tenaga pengajar profesional, SMK N 2 mendorong siswa
@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="col-md-6 text-center">
-        <img src="<?= base_url(''); ?>/assets/img/about/sekolah.jpg"" class=" img-thumbnail rounded shadow" alt="Gambar Sekolah">
+        <img src="<?= base_url('assets/img/about/sekolah.jpg'); ?>" class=" img-thumbnail rounded shadow" alt="Gambar Sekolah">
       </div>
     </div>
   </div>
@@ -58,7 +58,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 mb-3">
-          <img src="<?= base_url(''); ?>/assets/img/about/ppdb.jpg" alt="PPDB Image" class="img-fluid rounded shadow">
+          <img src="<?= base_url('assets/img/about/ppdb.jpg'); ?>" alt="PPDB Image" class="img-fluid rounded shadow">
         </div>
         <div class="col-md-6">
           <button class="btn btn-light fw-bold rounded-pill mb-3 p-3">Pengumuman dan Informasi PPDB</button>
@@ -212,7 +212,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col">
         <div class="card h-100">
-          <img src="<?= base_url(''); ?>/assets/img/about/pramuka.jpg"" class=" card-img-top" alt="Pramuka">
+          <img src="<?= base_url('assets/img/about/pramuka.jpg'); ?>" class=" card-img-top" alt="Pramuka">
           <div class="card-body text-center">
             <h5 class="card-title">Pramuka</h5>
           </div>
@@ -220,7 +220,7 @@
       </div>
       <div class="col">
         <div class="card h-100">
-          <img src="<?= base_url(''); ?>/assets/img/about/paskib.jpg"" class=" card-img-top" alt="Paskibra">
+          <img src="<?= base_url('assets/img/about/paskib.jpg'); ?>" class=" card-img-top" alt="Paskibra">
           <div class="card-body text-center">
             <h5 class="card-title">Paskibra</h5>
           </div>
@@ -228,7 +228,7 @@
       </div>
       <div class="col">
         <div class="card h-100">
-          <img src="<?= base_url(''); ?>/assets/img/about/pmr.jpg"" class=" card-img-top" alt="PMR">
+          <img src="<?= base_url('assets/img/about/pmr.jpg'); ?>" class=" card-img-top" alt="PMR">
           <div class="card-body text-center">
             <h5 class="card-title">PMR</h5>
           </div>
