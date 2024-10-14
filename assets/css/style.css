@@ -88,5 +88,10 @@
   color: #0048b4;
   transition: color 0.3s ease;
 }
+.same-size {
+  width: 100%;
+  height: 250px; /* Atur tinggi yang sama untuk semua gambar */
+  object-fit: cover; /* Memastikan gambar tetap proporsional dan terpotong dengan rapi */
+}
 
 /* login */
