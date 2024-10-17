@@ -3,12 +3,12 @@
 <?= $this->section('content'); ?>
 
 <!-- hero -->
-<section id="home">
+<section id="hero">
   <div class="container-fluid mt-5 pt-5">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="<?= base_url('assets/img/bg/g-1.jpg'); ?>" class="d-block w-100" alt="">
+          <img src="<?= base_url('assets/img/bg/g-1.jpg'); ?> " class="d-block w-100" alt="">
           <div class="carousel-caption d-none d-md-block">
             <h5 class="fs-1 text-light fw-semibold">Tempat Belajar, Berkembang, dan Berprestasi</h5>
             <p class="text-light">SMK N 2 adalah rumah bagi siswa yang ingin berkembang dalam keterampilan dan
@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="<?= base_url('assets/img/bg/g-2.jpg') ?>" class="d-block w-100" alt="">
+          <img src="<?= base_url('assets/img/bg/g-2.jpg'); ?> " class="d-block w-100" alt="">
           <div class="carousel-caption d-none d-md-block">
             <h5 class="fs-1 text-light fw-semibold">Membangun Karakter, Mengasah Keterampilan</h5>
             <p class="text-light">Dengan fasilitas lengkap dan tenaga pengajar profesional, SMK N 2 mendorong siswa
@@ -175,7 +175,7 @@
               <p class="card-text" x-text="item.text"></p>
             </div>
             <div class="card-footer bg-transparent border-0 text-center pb-4">
-              <a href="#" class="btn btn-info text-light">Selengkapnya</a>
+              <button @click="openModal(item)" class="btn btn-info text-light" data-bs-toggle="modal" data-bs-target="#jurusanModal">Selengkapnya</button>
             </div>
           </div>
         </div>
@@ -200,6 +200,33 @@
       </div>
     </div>
   </div>
+  <!-- Modal untuk Detail Jurusan -->
+  <div class="modal fade" id="jurusanModal" tabindex="-1" aria-labelledby="jurusanModalLabel" aria-hidden="true" x-ref="jurusanModal">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="jurusanModalLabel" x-text="selectedJurusan.judul"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img :src="selectedJurusan.gambar" class="img-fluid" alt="Jurusan Image">
+            </div>
+            <div class="col-md-6">
+              <h3 x-text="selectedJurusan.judul"></h3>
+              <p><strong>Deskripsi:</strong> <span x-text="selectedJurusan.deskripsi"></span></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </section>
 <!-- jurusan -->
 
