@@ -157,22 +157,22 @@
 <!-- kouta seleksi -->
 
 <!-- jurusan -->
-<section id="jurusan" class="py-5">
+<section id="jurusan" class="py-5" x-data="card()">
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="display-4 text-center pb-3 fw-semibold">Program <span class="text-info">Keahlian</span></h2>
       <p class="lead">Pilih jurusan yang sesuai dengan minat dan bakat Anda.</p>
     </div>
-    <!-- panggil function card -->
-    <div x-data="card()" class="row">
-      <!-- for melakukan perulangan berdasarkan daftar cardJurusan -->
+
+    <div class="row">
       <template x-for="(item, index) in cardJurusan" :key="index">
         <div class="col-12 col-md-6 col-lg-3 mb-4">
           <div class="card h-100 shadow border-info">
-            <img :src="item.gambar" class="card-img-top object-fit-cover" alt="Jurusan 1" height="200">
+            <img :src="item.gambar" class="card-img-top object-fit-cover" alt="Jurusan Image" height="200">
             <div class="card-body">
               <h5 class="card-title" x-text="item.judul"></h5>
-              <p class="card-text" x-text="item.text"></p>
+              <!-- Tampilkan deskripsi singkat di kartu -->
+              <p class="card-text" x-text="item.shortText"></p>
             </div>
             <div class="card-footer bg-transparent border-0 text-center pb-4">
               <button @click="openModal(item)" class="btn btn-info text-light" data-bs-toggle="modal" data-bs-target="#jurusanModal">Selengkapnya</button>
@@ -180,26 +180,26 @@
           </div>
         </div>
       </template>
-      <div class="d-flex justify-content-center my-4">
-        <!-- prevPage() dan nextPage(): Fungsi untuk berpindah halaman (ke halaman sebelumnya dan berikutnya). Tombol dinonaktifkan jika sudah di halaman pertama atau halaman terakhir. -->
-        <button @click="prevPage()" :disabled="currentPage === 1" class="btn btn-outline-info me-2" aria-label="Previous">
-          <i class="bi bi-chevron-left"></i>
-          <span class="d-none d-md-inline">Previous</span>
+    </div>
+
+    <!-- Pagination -->
+    <div class="d-flex justify-content-center my-4">
+      <button @click="prevPage()" :disabled="currentPage === 1" class="btn btn-outline-info me-2">
+        <i class="bi bi-chevron-left"></i> Previous
+      </button>
+
+      <template x-for="page in totalPage" :key="page">
+        <button @click="changePage(page)" class="btn mx-2" :class="{'btn-info': currentPage === page, 'btn-outline-info': currentPage !== page}">
+          <span x-text="page"></span>
         </button>
-        <!-- Menampilkan tombol halaman sesuai jumlah totalPage -->
-        <template x-for="page in totalPage" :key="page">
-          <button @click="changePage(page)" class="btn mx-2" aria-label="Current Page"
-            :class="{'btn-info': currentPage === page, 'btn-outline-info': currentPage !== page}">
-            <span x-text="page"></span>
-          </button>
-        </template>
-        <button @click="nextPage()" :disabled="currentPage === totalPage" class="btn btn-outline-info ms-2" aria-label="Next">
-          <span class="d-none d-md-inline">Next</span>
-          <i class="bi bi-chevron-right"></i>
-        </button>
-      </div>
+      </template>
+
+      <button @click="nextPage()" :disabled="currentPage === totalPage" class="btn btn-outline-info ms-2">
+        Next <i class="bi bi-chevron-right"></i>
+      </button>
     </div>
   </div>
+
   <!-- Modal untuk Detail Jurusan -->
   <div class="modal fade" id="jurusanModal" tabindex="-1" aria-labelledby="jurusanModalLabel" aria-hidden="true" x-ref="jurusanModal">
     <div class="modal-dialog modal-fullscreen">
@@ -213,21 +213,18 @@
             <div class="col-md-6">
               <img :src="selectedJurusan.gambar" class="img-fluid" alt="Jurusan Image">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 ">
               <h3 x-text="selectedJurusan.judul"></h3>
-              <p><strong>Deskripsi:</strong> <span x-text="selectedJurusan.deskripsi"></span></p>
+              <p><strong>Deskripsi:</strong> <span x-text="selectedJurusan.text"></span></p>
             </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
 
-
 </section>
+
 <!-- jurusan -->
 
 <!-- Ekstrakurikuler -->
