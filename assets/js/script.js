@@ -10,7 +10,7 @@ function card() {
       {
         gambar: 'assets/img/jursan/mm.jpg',
         judul: 'Multimedia',
-        shortText:'Jurusan Multimedia dengan keterampilan desain grafis, animasi, editing video, dan pengembangan konten digital. Lulusan siap berkarya di industri kreatif dan media.',
+        shortText:'Jurusan Multimedia dengan keterampilan desain grafis, animasi, editing video, dan pengembangan konten    digital. Lulusan siap berkarya di industri kreatif dan media.',
         text: 'Jurusan Multimedia dirancang untuk mengembangkan keterampilan siswa di bidang produksi media digital, termasuk desain grafis, animasi, video editing, dan pengembangan konten interaktif. Siswa akan mempelajari perangkat lunak industri seperti Adobe Creative Suite, serta teknik-teknik modern dalam pengolahan gambar, pembuatan video, dan animasi 3D. Selain itu, jurusan ini juga memberikan dasar-dasar dalam produksi konten audio-visual untuk berbagai media, termasuk media sosial, televisi, dan platform online lainnya. Dengan meningkatnya permintaan untuk konten digital berkualitas, lulusan multimedia memiliki peluang besar di industri kreatif seperti periklanan, perfilman, televisi, dan desain web.'
       },
       {
@@ -90,3 +90,44 @@ function card() {
     }
   };
 }
+
+// tenaga Prndidik (guru)
+const carousel = document.querySelector(".carousel");
+const arrowBtn = document.querySelectorAll(".wrapper i");
+const firstCaedWidht = carousel.querySelector(".card").offsetWidth;
+
+let isDragging = false, startX, startScrollLeft;
+
+arrowBtn.forEach(btn => {
+  btn.addEventListener("click" , () => {
+   carousel.scrollLeft += btn.id === "left" ? -firstCaedWidht : firstCaedWidht;
+  })
+});
+
+// Pass event object 'e' to the function
+const dragStart = (e) => {
+  isDragging = true;
+  carousel.classList.add("dragging");
+  startX = e.pageX; // Record the initial X position
+  startScrollLeft = carousel.scrollLeft; // Record the initial scroll position
+}
+
+// Pass event object 'e' to the function
+const dragging = (e) => {
+  if (!isDragging) return; 
+  e.preventDefault(); // Prevent default to avoid selection of content
+  const x = e.pageX - startX; // Calculate the distance moved
+  carousel.scrollLeft = startScrollLeft - x; // Update scroll position
+}
+
+// Function to stop dragging
+const dragStop = () => {
+  isDragging = false;
+  carousel.classList.remove("dragging");
+}
+
+// Add event listeners
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+
