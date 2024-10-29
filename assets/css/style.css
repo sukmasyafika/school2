@@ -2,14 +2,6 @@
   font-family: 'Jost', sans-serif;
 }
 
-/* login */
-/* .login {
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-} */
-
 .navbar-nav .nav-link {
   color: #000;
   font-weight: bold;
@@ -89,10 +81,16 @@
 }
 
 .same-size {
-  width: 100%;
+  width: 98%;
   height: 250px; /* Atur tinggi yang sama untuk semua gambar */
   object-fit: cover; /* Memastikan gambar tetap proporsional dan terpotong dengan rapi */
 }
+.carousel-item{
+  width: 98%;
+  height: 480px; 
+  object-fit: cover;
+}
+
 
 /* tenaga */
 .wrapper{
@@ -180,10 +178,6 @@
   margin: 30px 0 5px;
 }
 
-.card span{
-  color: #6a6d78;
-  font-size: 1.31rem;
-}
 
 @media screen {
  .wrapper .carousel{
@@ -196,5 +190,3 @@
      grid-auto-columns: 100%;
 }
  }
-
-/* login */
