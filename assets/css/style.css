@@ -7,7 +7,7 @@
   font-weight: bold;
 }
 
-.navbar-nav .nav-link:hover {
+.navbar-nav .nav-link.active {
   color: #17a2b8;
 }
 
